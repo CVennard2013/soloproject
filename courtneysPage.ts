@@ -13,11 +13,13 @@ export class courtney extends BasePage {
     calendarBtn: By=By.xpath('//button[@class="btn btn-default selectable"]');
     jan22: By=By.xpath('//span[@aria-label="Monday January 22nd, 2024 Press enter to select a date, or press arrow keys to navigate through days."]');
     jan29: By=By.xpath('//span[@aria-label="Monday January 29th, 2024 Press enter to select a date, or press arrow keys to navigate through days."]');
+    sep8: By=By.xpath('//span[@aria-label="Sunday September 8th, 2024 Press enter to select a date, or press arrow keys to navigate through days."]');
+    arrow: By=By.xpath('//button[@class="btnNextPrev next-btn focusable"]');
     viewRates: By=By.id('findPricesButton');
     checkIn: By=By.xpath('(//input[@*])[6]');
     checkOut: By=By.xpath('(//input[@*])[7]');
     coronado: By=By.id('detailPageLink-coronado-springs-resort');
-    addToCartBtn: By=By.id('WDW_Rooms_AddCart_4LFDC_1N_NA');
+    addToCartBtn: By=By.id('WDW_Rooms_AddCart_4Y5KC_1N_NA');
     continue: By=By.xpath('//button[@class="buttons btnSubmit contBtn"]');
     resortName: By=By.id('roomHeader');
     delete: By=By.id('removeButtonvacationoffer-room');
