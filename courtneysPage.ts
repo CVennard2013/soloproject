@@ -23,6 +23,10 @@ export class courtney extends BasePage {
     delete: By=By.id('removeButtonvacationoffer-room');
     delete2: By=By.name('removeTickets');
     cart: By=By.xpath('//span[@class="title rt-omniChannelToggle"]');
+    thingsToDo: By=By.name('&lid=WDW_Header_ThingsToDo_CategoryLink');
+    dining: By=By.xpath('//div[text()="All Dining"]');
+    diningPage: By=By.xpath('//h1[@title="Dining"]');
+
 
 
     constructor(){
@@ -67,7 +71,7 @@ export class courtney extends BasePage {
     };
     async canHover2() {
         const hoverAction = this.driver.actions()
-        const ctaElement = await this.getElement(this.parkAndTicketDropdown)
+        const ctaElement = await this.getElement(this.thingsToDo)
         console.log(`Bonus: Hover = ${hoverAction} CTA = ${ctaElement}`)
         await this.actionWiggle(hoverAction, ctaElement, 100)
         await hoverAction.perform() // Actions don't actually happen until perform is called
