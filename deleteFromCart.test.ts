@@ -11,7 +11,9 @@ test('add to cart', async()=>{
     (await court.getElement(court.coronado)).click();
     (await court.getElement(court.addToCartBtn)).click();
     (await court.getElement(court.continue)).click();
-    let text=await court.getResortName();
-    expect(text).toContain('Coronado Springs');
+    (await court.getElement(court.delete)).click();
+    (await court.getElement(court.delete2)).click();
+    let text=await court.getCartContent();
+    expect(text).toContain('Your cart is empty.');
     await court.driver.quit();
 });

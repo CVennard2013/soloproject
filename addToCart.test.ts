@@ -5,7 +5,8 @@ test('add to cart', async()=>{
     await court.navigate();
     (await court.getElement(court.calendarBtn)).click();
     await court.driver.sleep(2000);
-    (await court.getElement(court.jan22)).click();
+    await court.repeat(7, court.arrow);
+    (await court.getElement(court.sep8)).click();
     (await court.getElement(court.viewRates)).click();
     (await court.getElement(court.coronado)).click();
     (await court.getElement(court.addToCartBtn)).click();
